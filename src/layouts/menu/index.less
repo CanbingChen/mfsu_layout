@@ -1,0 +1,93 @@
+@headerHeight      : 56px;
+@minWidth          : 1280px;
+@menuWidth         : 200px;
+@subMenuPaddingLeft: 14px;
+@min-content-width:1080px;
+
+.xd_sider {
+  background: #ffffff;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.06);
+  height: calc(100vh - @headerHeight);
+  z-index: 10;
+  & [role='menu'] {
+    border-right: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  :global {
+    .ant-menu {
+      padding: 5px 0px !important;
+    }
+    .ant-menu-submenu-arrow {
+      left: 170px;
+      right: auto;
+    }
+    .ant-menu-submenu-title {
+      width: 100%;
+    }
+    .ant-layout-sider-trigger {
+      position: absolute;
+      background: #fafafa;
+      box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.06);
+      & > span {
+        color: #999999;
+      }
+    }
+    .ant-menu-submenu-selected {
+      &.ant-menu-submenu-vertical {
+        background: #e3f1ff;
+      }
+      .ant-menu-submenu-title {
+        color: #333333;
+        font-weight: 600;
+      }
+    }
+
+    .ant-menu-vertical .ant-menu-item:not(:last-child),
+    .ant-menu-vertical-left .ant-menu-item:not(:last-child),
+    .ant-menu-vertical-right .ant-menu-item:not(:last-child),
+    .ant-menu-inline .ant-menu-item:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    .ant-menu-inline {
+      .ant-menu-item {
+        width: 100%;
+        padding-left: 24px !important;
+        transition: none !important;
+      }
+      .ant-menu-item-selected {
+        padding-left: @subMenuPaddingLeft !important;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        // box-shadow: -3px 0px 0px #1890ff;
+        border-radius: 0px 100px 100px 0px;
+        &::after {
+          display: none;
+        }
+      }
+      .ant-menu-item:active {
+        padding-left: @subMenuPaddingLeft !important;
+        background: #e3f1ff !important;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        border-radius: 0px 100px 100px 0px;
+      }
+    }
+ 
+    .ant-menu-item,.ant-menu-submenu{
+      border-left: 3px solid transparent;
+      &.ant-menu-item-selected {
+        // box-shadow: -3px 0px 0px #1890ff;
+        border-left-color:#1890ff;
+        background: #e3f1ff !important;
+      }
+    }
+
+    .ant-menu-sub {
+      background: #f6f9fc;
+      box-shadow: 0px 1px 0px 0px #e9f1fa, 0px 1px 0px 0px #e9f1fa;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import '../index.less';
+
+.header{
+  width: 100%;
+  height: @headerHeight;
+  min-width: @minWidth;
+  background: linear-gradient(90deg, #1890FF 0%, #3377EE 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo_icon{
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+      color: #FFFFFF;
+    }
+    .logo_title{
+      font-size: 18px;
+      color: #FFFFFF;
+      line-height: 34px;
+    }
+  }
+
+  .operate_bar{
+    display: flex;
+    align-items: center;
+    .search{
+
+    }
+  }
+}
+.toolbox{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  &>div,&>a{
+    display: flex;
+    justify-content: center;
+    width: 48px;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+.version{
+  font-size: 72px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 20px;
+  margin-right: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  .icon_block{
+    margin-right: 20px;
+  }
+}
+.alertWrapper {
+  position: absolute;
+  width: 230px;
+  z-index: 10;
+  top: 50px;
+  .alert {
+    position: absolute;
+    top: -5px;
+    width: 230px;
+    background-image: url('@/assets/Image/vip-alert.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 15px 18px 20px 20px;
+    color: white;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.5;
+    .cancelButton {
+      font-size: 14px;
+      margin-right: 12px;
+      opacity: 0.75;
+      cursor: pointer;
+    }
+    .okButton {
+      color: #f80;
+      border: none;
+      margin-bottom: 10px;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}
+
+.menu {
+  top: 25px;
+}
